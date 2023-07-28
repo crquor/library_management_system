@@ -37,3 +37,48 @@
             }
         });
      });
+     function valid()
+{
+if(document.chngpwd.opwd.value=="")
+{
+alert("Current password field cannot be empty");
+document.chngpwd.opwd.focus();
+return false;
+}
+else if(document.chngpwd.npwd.value=="")
+{
+alert("New password field cannot be empty");
+document.chngpwd.npwd.focus();
+return false;
+}
+else if(document.chngpwd.cpwd.value=="")
+{
+alert("Confirm password field cannot be empty");
+document.chngpwd.cpwd.focus();
+return false;
+}
+else if(document.chngpwd.npwd.value!= document.chngpwd.cpwd.value)
+{
+alert("Password and Confirm Password field doesn't match");
+document.chngpwd.cpwd.focus();
+return false;
+}
+return true;
+}
+
+function valide()
+{
+if(document.chngeml.eml.value=="")
+{
+alert("New email field cannot be empty");
+document.chngeml.eml.focus();
+return false;
+}
+else if(document.chngeml.pwd.value=="")
+{
+alert("Password field cannot be empty");
+document.chngeml.pwd.focus();
+return false;
+}
+return true;
+}

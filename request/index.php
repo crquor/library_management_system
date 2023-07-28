@@ -1,13 +1,13 @@
 <?php
 $title = 'Request a book';
-include '../scripts/header.php';
-include '../scripts/db.php';
+include '../includes/header.php';
+include '../includes/db.php';
 ?>
 <body>
-<?php include '../scripts/navbar.php'; ?>
+<?php include '../includes/navbar.php'; ?>
     <div class="fmf"></br>
     <form id="inputs" action="" method="POST">
-        <b><strong class="reqs" style="align: center;" >REQUEST A BOOK</strong></br>
+        <p class="reqs"><b>REQUEST A BOOK</b></p>
 </br>
     <input type="text" id="req_name" name="name" placeholder="Enter your username"  required/></br>
     <input type="text" id="req_id" name="id" placeholder="Enter your STUDENT ID" required/></br>

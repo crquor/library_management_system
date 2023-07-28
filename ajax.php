@@ -1,6 +1,6 @@
 <?php
     //Including Database configuration file.
-    include './scripts/db.php';
+    include './includes/db.php';
     //Getting value of "search" variable from "script.js".
     if (isset($_POST['search'])) {
     //Search box value assigning to $Name variable.
@@ -37,6 +37,7 @@
             echo "</tr>";
        }
        echo '</table>';
+
            ?>
        <?php
     }

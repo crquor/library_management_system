@@ -1,10 +1,10 @@
 <?php
 $title = 'Login';
-include '../scripts/header.php';
-include '../scripts/db.php';
+include '../includes/header.php';
+include '../includes/db.php';
 ?>
 <body>
-<?php include '../scripts/navbar.php'; ?>
+<?php include '../includes/navbar.php'; ?>
        <form id="lgn-form" action="" method="POST">
         <fieldset>
         <legend class="lsg">LOGIN</legend></br>
@@ -23,12 +23,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
    $myusername = mysqli_real_escape_string($con,$_POST['username']);
    $mypassword = mysqli_real_escape_string($con,$_POST['password']); 
    
-   $sql = "SELECT id FROM students WHERE username = '$myusername' and pass_code = '$mypassword'";
+   $sql = "SELECT email FROM students WHERE username = '$myusername' and pass_code = '$mypassword'";
    $result = mysqli_query($con,$sql);
    $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
    
    $count = mysqli_num_rows($result);
-   
+
    // If result matched $myusername and $mypassword, table row must be 1 row
      
 

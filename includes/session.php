@@ -1,5 +1,5 @@
 <?php
-   include('../scripts/db.php');
+   include('../includes/db.php');
    session_start();
    
    $user_check = $_SESSION['login_user'];
