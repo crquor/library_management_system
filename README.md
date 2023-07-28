@@ -5,8 +5,8 @@ This is a simple lbirary management system created using PHP and MYSQL.
 ### Features: 
 1. Search and locate the book in the library
 2. Request a book if it's not available
-3. Student Login
-   Students can see the books they have requested after they are logged in
+3. Student Login:
+   Students can see the books they have requested, change their email and password, etc.
 
    Upcoming : Student's profile and librarian dashboard
 
