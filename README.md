@@ -36,5 +36,3 @@ For now, only manual installation is supported which can be done by following wa
 The project is in the initial stage and no any security mechanisms has been implemented so it's **not** recommended to host this project.
 
 
-
-```
