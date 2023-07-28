@@ -2,8 +2,15 @@
 
 This is a simple lbirary management system created using PHP and MYSQL. 
  
+### Features: 
+1. Search and locate the book in the library
+2. Request a book if it's not available
+3. Student Login
+   Students can see the books they have requested after they are logged in
 
-# Installation
+   Upcoming : Student's profile and librarian dashboard
+
+## Installation
 
 For now, only manual installation is supported which can be done by following ways:
 
@@ -25,8 +32,8 @@ For now, only manual installation is supported which can be done by following wa
     
     **Finally, Go to http://localhost or 127.0.0.1**
 
-## NOTE: 
-The project is in the initial stage and no any security mechanisms has been implemented so it's **not** recommended to host it.
+### NOTE: 
+The project is in the initial stage and no any security mechanisms has been implemented so it's **not** recommended to host this project.
 
 
 
