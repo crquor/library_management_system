@@ -24,7 +24,7 @@ For now, only manual installation is supported which can be done by following wa
 
  5. Import the file with .sql extension into your database
 
-  6. Navigate to the folder named "scripts", you'll
+  6. Navigate to the folder named "includes", you'll
         find a file named 'db.php'
 
  7. In that file, change the database server, username, password and username that matches  your database configuration
