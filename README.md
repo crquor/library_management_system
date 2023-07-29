@@ -14,7 +14,7 @@ This is a simple lbirary management system created using PHP and MYSQL.
 
 For now, only manual installation is supported which can be done by following ways:
 
- 1. Download the zip file from [here](https://github.com/crquor/library_management_system) 
+ 1. Download the zip file from [here](https://github.com/crquor/library_management_system/archive/refs/heads/main.zip) 
     
  2. Extract it and move it to htdocs folder ( for xampp users) and www folder (for WAMPP users)
 
