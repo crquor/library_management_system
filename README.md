@@ -1,6 +1,6 @@
 # Welcome to crquor!
 
-This is a simple lbirary management system created using PHP and MYSQL. 
+This is a simple library management system created using PHP and MYSQL. 
  
 ### Features: 
 1. Search and locate the book in the library
