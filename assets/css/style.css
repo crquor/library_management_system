@@ -28,6 +28,21 @@
     text-transform: uppercase;
     letter-spacing: 2px;;
   }
+  #adl{
+    font-weight: bold;
+    padding: 15px;
+    background: transparent;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 0px 1px, 0px -1px 0px 1px #000;
+    border-radius: 5px;
+    color: #000;
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+    border: 1px solid black;
+    text-transform: uppercase;
+    letter-spacing: 2px;;
+  }
   #search{
     border-radius: 5px;
     outline: none;
@@ -156,7 +171,21 @@
     letter-spacing: 2px;
     text-transform: uppercase;
   }
-
+#roless{
+  margin-top: 20px;
+    border-radius: 5px;
+    outline: none;
+    width: 300px;
+    padding: 10px;
+    background-color: #efefef;
+    border: 2px solid black;
+    color: #111;
+    box-shadow: 3px 1px 0px 2px, 0px -1px 0px 2px rgba(0, 0, 0, 0.62);
+    font-size: 15px;
+    height: 50px;    
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
   #lg_btn{
     margin-right: 195px;
     margin-bottom: 40px;
@@ -527,4 +556,7 @@
   height: 58px;    
   letter-spacing: 2px;
   text-transform: uppercase;
+}
+.adre{
+  margin-top: 70px;
 }
