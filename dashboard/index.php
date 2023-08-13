@@ -17,7 +17,7 @@ include '../includes/session.php';
   <input type="radio" id="tab2" name="tab-control">
   <input type="radio" id="tab3" name="tab-control">
   <ul>
-    <li title="Requests"><label for="tab1" role="button"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg><br><span>YOUR REQUESTS</span></label></li>
+    <li title="Requests"><label for="tab1" role="button"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg><br><span>Books issued to me</span></label></li>
     <li title="Email"><label for="tab2" role="button"><svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="M140-160q-24 0-42-18t-18-42v-520q0-24 18-42t42-18h680q24 0 42 18t18 42v520q0 24-18 42t-42 18H140Zm340-302L140-685v465h680v-465L480-462Zm0-60 336-218H145l335 218ZM140-685v-55 520-465Z"/></svg><br><span>CHANGE EMAIL</span></label></li>
     <li title="Password"><label for="tab3" role="button"><svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="M80-200v-61h800v61H80Zm38-254-40-22 40-68H40v-45h78l-40-68 40-22 38 67 38-67 40 22-40 68h78v45h-78l40 68-40 22-38-67-38 67Zm324 0-40-24 40-68h-78v-45h78l-40-68 40-22 38 67 38-67 40 22-40 68h78v45h-78l40 68-40 24-38-67-38 67Zm324 0-40-24 40-68h-78v-45h78l-40-68 40-22 38 67 38-67 40 22-40 68h78v45h-78l40 68-40 24-38-67-38 67Z"/></svg><br><span>CHANGE PASSWORD</span></label></li>
   </ul>
@@ -30,7 +30,7 @@ include '../includes/session.php';
 
     <section>
     <?php
-      $Que= "SELECT * FROM requests where username LIKE '%$login_session'";
+      $Que= "SELECT * FROM books_issued where username LIKE '%$login_session'";
     //Query execution
        $ExecQuery = MySQLi_query($con, $Que);
     //Creating unordered list to display result.
@@ -38,10 +38,15 @@ include '../includes/session.php';
        <table id="request_list">
        <tr>
           <th>Name of the book</th>
+          <th>Issued date</th>
+          <th>Return Date</th>
        </tr>';
        while ($Result = MySQLi_fetch_array($ExecQuery)) {
          echo "<tr>";
             echo "<td>" . $Result['book_name'] . "</td>";
+            echo "<td>" . $Result['issued_date'] . "</td>";
+            echo "<td>" . $Result['return_date'] . "</td>";
+
             echo "</tr>";
        }
        echo '</table>';

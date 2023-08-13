@@ -15,6 +15,7 @@ include '../includes/db.php';
 </br>
 <input id="lg_btn" type="submit" value="LOGIN">
 <?php
+session_id("student");
 session_start();
    
 if($_SERVER["REQUEST_METHOD"] == "POST") {

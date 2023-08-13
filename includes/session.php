@@ -1,5 +1,7 @@
 <?php
    include('../includes/db.php');
+   session_id("student");
+
    session_start();
    
    $user_check = $_SESSION['login_user'];

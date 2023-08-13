@@ -16,6 +16,7 @@ include $_SERVER['DOCUMENT_ROOT']."/includes/db.php";
 </br>
 <input id="lg_btn" type="submit" value="LOGIN">
 <?php
+session_id("librarian");
 session_start();
    
 if($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -26,7 +27,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
    
    $sql = "SELECT * FROM librarian WHERE ausername = '$myusername' and apass_code = '$mypassword'";
    $result = mysqli_query($con,$sql);
-   $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+   $arow = mysqli_fetch_array($result,MYSQLI_ASSOC);
    
    $count = mysqli_num_rows($result);
 
@@ -34,7 +35,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
      
 
 if($count == 1) {
-         $_SESSION["myusername"]= "adnusername"; // storing username in session
+         $_SESSION["ausername"]= "adnusername"; // storing username in session
 
          $_SESSION['alogin_user'] = $myusername;
          
