@@ -1,4 +1,4 @@
-# Welcome to crquor!
+# Welcome to library management system!
 
 This is a simple library management system created using PHP and MYSQL. 
  
