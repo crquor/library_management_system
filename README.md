@@ -6,9 +6,12 @@ This is a simple library management system created using PHP and MYSQL.
 1. Search and locate the book in the library
 2. Request a book if it's not available
 3. Student Login:
-   Students can see the books they have requested, change their email and password, etc.
-
-   Upcoming : Student's profile and librarian dashboard
+   Students can change their email and password, etc.
+   Students can see the books issued to them including the issued date and (to be returned) date
+4. Librarian Dashboard: 
+   Librarian can see all the books
+   Librarian can see the books that has been issued (including to whom it is issued to, name of the book, issued date and return date)
+   Librarian can change password of his/her account 
 
 ## Installation
 
