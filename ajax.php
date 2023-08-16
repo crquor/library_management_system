@@ -3,7 +3,7 @@
     include './includes/db.php';
     //Getting value of "search" variable from "script.js".
     if (isset($_POST['search'])) {
-    //Search box value assigning to $Name variable.
+    // Every new word typed in the search box is assigned to book_name variable 
        $book_name= $_POST['search'];
     //Search query.
        $Query= "SELECT id, book_name,book_image, Author, shelf, row_no, column_no FROM books WHERE book_name LIKE '%$book_name%'";
