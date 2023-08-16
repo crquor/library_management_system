@@ -10,10 +10,8 @@ include 'includes/header.php';
        <br>
        <br />
        <div id="display"></div>
-       <footer class="ftc">
-<p>Are you a student? <a class="ren" href="./login"> Login here</a></p>
-</footer>
-
+       
+<?php include 'includes/footer.php'; ?>
 <script type="text/javascript" src="/scripts/jquery.min.js"></script>
 <script type="text/javascript" src="/scripts/script.js"></script>
       </body>

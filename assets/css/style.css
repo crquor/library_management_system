@@ -143,13 +143,21 @@ margin-top: 20px;
     letter-spacing: 2px;
     text-transform: uppercase;
   }
-  footer{
+  .ftc{
     display: block;
     text-align: center;
   margin-top: 250px;
   }
   .ftc p{
     font-size: 18px;
+  }
+  .ftc_l{
+    display: block;
+    text-align: center;
+  margin-top: 10px;
+  }
+  .ftc_l p{
+    font-size: 17px;
   }
   fieldset{
     width: 600px;

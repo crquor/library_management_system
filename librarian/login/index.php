@@ -52,6 +52,9 @@ if($count == 1) {
       ?>
 </fieldset>
 </form>
+<footer class="ftc_l">
+<p>Are you a student? <a class="ren" href="/login"> Login here</a></p>
+</footer>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script type="text/javascript" src="script.js"></script>
       </body>
