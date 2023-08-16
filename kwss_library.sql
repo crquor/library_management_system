@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 13, 2023 at 09:28 AM
+-- Generation Time: Aug 16, 2023 at 11:27 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -43,8 +43,8 @@ CREATE TABLE `books` (
 --
 
 INSERT INTO `books` (`id`, `book_name`, `book_image`, `Author`, `shelf`, `row_no`, `column_no`, `avail`) VALUES
-(28, 'The Power of Your Subconcious Mind', 'http://localhost/assets/images/books/tpoysm.jpg', 'DR. Joseph Murphy', 5, 3, 1, 'Yes'),
-(5505, 'To Kill a Mockingbird', 'http://localhost/assets/images/books/tkamb.webp', 'Harper Lee', 1, 2, 1, 'No');
+(5506, 'The Power of Your Subconscious Mind', 'http://localhost/assets/images/books/tpoysm.jpg', 'DR Jospeph Murphy', 2, 1, 5, 'No'),
+(5507, 'To Kill A Mockingbird', 'http://localhost/assets/images/books/tkamb.webp', 'Harper Lee', 3, 2, 1, '');
 
 -- --------------------------------------------------------
 
@@ -115,6 +115,7 @@ INSERT INTO `requests` (`username`, `stud_id`, `email`, `book_name`) VALUES
 
 CREATE TABLE `students` (
   `id` int(11) NOT NULL,
+  `student_photo` varchar(210) NOT NULL,
   `email` varchar(210) NOT NULL,
   `username` varchar(10) NOT NULL,
   `pass_code` varchar(15) NOT NULL
@@ -124,9 +125,9 @@ CREATE TABLE `students` (
 -- Dumping data for table `students`
 --
 
-INSERT INTO `students` (`id`, `email`, `username`, `pass_code`) VALUES
-(3435, 'aadip@gmail.com', 'aadipshres', 'aadip123'),
-(124554, 'm@ghimiresijan.com.np', 'crquor', 'sijan');
+INSERT INTO `students` (`id`, `student_photo`, `email`, `username`, `pass_code`) VALUES
+(3435, '', 'aadip@gmail.com', 'aadipshres', 'aadip123'),
+(124554, 'http://localhost/assets/images/students/crquor.webp', 'm@ghimiresijan.com.np', 'crquor', 'sijan');
 
 --
 -- Indexes for dumped tables
@@ -161,6 +162,16 @@ ALTER TABLE `requests`
 --
 ALTER TABLE `students`
   ADD PRIMARY KEY (`username`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `books`
+--
+ALTER TABLE `books`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5508;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
