@@ -109,14 +109,14 @@ margin-top: 20px;
     margin-top: 100px;
   }
   .fmf{
-    display: block;
-    text-align: center;
+    display: flex;
+    justify-content: center;
   }
   .fmf input{
     margin-top: 40px;
     border-radius: 5px;
     outline: none;
-    width: 30%;
+    width: 50%;
     padding: 10px;
     background-color: #efefef;
     border: 2px solid black;
@@ -127,21 +127,26 @@ margin-top: 20px;
     letter-spacing: 2px;
     text-transform: uppercase;
   }
+  .subre{
+    display: flex;
+    justify-content: center;
+  }
   #req_submit{
-    margin-left: 535px;
-    margin-top: 20px;
-    border-radius: 5px;
-    outline: none;
-    width: 10%;
-    padding: 12px;
-    background-color: #efefef;
-    border: 2px solid black;
-    color: #111;
-    font-size: 15px;
-    box-shadow: 3px 1px 0px 2px, 0px -1px 0px 2px rgba(0, 0, 0, 0.62);
-    height: 58px;    
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    margin-right: 195px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  border-radius: 5px;
+  outline: none;
+  width: 100px;
+  padding: 12px;
+  background-color: #efefef;
+  border: 2px solid black;
+  color: #111;
+  font-size: 15px;
+  box-shadow: 3px 1px 0px 2px, 0px -1px 0px 2px rgba(0, 0, 0, 0.62);
+  height: 58px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   }
   .ftc{
     display: block;
@@ -184,7 +189,6 @@ margin-top: 20px;
     font-size: 15px;
     height: 50px;    
     letter-spacing: 2px;
-    text-transform: uppercase;
   }
 #roless{
   margin-top: 20px;
@@ -221,6 +225,26 @@ margin-top: 20px;
   #lgn-form{
     margin-top: 50px;
   }
+  #req_f{
+    margin-top: 50px;
+  }
+  #req_btn{
+    margin-right: 175px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    border-radius: 5px;
+    outline: none;
+    width: 120px;
+    padding: 12px;
+    background-color: #efefef;
+    border: 2px solid black;
+    color: #111;
+    font-size: 15px;
+    box-shadow: 3px 1px 0px 2px, 0px -1px 0px 2px rgba(0, 0, 0, 0.62);
+    height: 50px;    
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
   .sgn{
     float: right;
   }
@@ -233,10 +257,11 @@ margin-top: 20px;
     padding: 50px;
     padding-bottom: 80px;
     width: 70%;
-    height: 550px;
+    height: auto;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     border-radius:  10px;
     min-width: 240px;
+    margin-bottom: 50px;
   }
   .tabs input[name="tab-control"] {
     display: none;
@@ -538,7 +563,6 @@ margin-top: 20px;
   box-shadow: 3px 1px 0px 2px, 0px -1px 0px 2px rgba(0, 0, 0, 0.62);
   height: 50px;    
   letter-spacing: 2px;
-  text-transform: uppercase;
 }
 #cpw{
  float: right;
@@ -546,7 +570,7 @@ margin-top: 20px;
   margin: 0;
   border-radius: 5px;
   outline: none;
-  width: 200px;
+  width: 205px;
   padding: 12px;
   background-color: #efefef;
   border: 2px solid black;

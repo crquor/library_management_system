@@ -1,13 +1,26 @@
 <?php
-$title = "Librarian | Dashboard";
+$title = 'Librarian | Dashboard';
 include $_SERVER['DOCUMENT_ROOT']."/librarian/session.php";
 include $_SERVER['DOCUMENT_ROOT']."/includes/header.php";
 include $_SERVER['DOCUMENT_ROOT']."/includes/db.php";
 ?>
+<link href="/assets/css/addi.css" rel="stylesheet" type="text/css"/>
 <body>
 <nav>
 <a href="./logout.php"><input id="re" type="button" value="SIGN OUT"></a>
-             <div class="header">
+<details class="dropdown">
+    <summary role="button">
+      <a class="button">ACTIONS</a>
+    </summary>
+    <ul>
+      <li><a href="./add_a_book">Add a new book</a></li>
+      <li><a href="./remove_a_book">Remove a book</a></li>
+      <li><a href="./manage_users">Manage students</a></li>
+
+  </ul>
+</details>
+     
+<div class="header">
 <a href="http://localhost"><img id="logo" src="/assets/images/header_img.png" width="240" height="120"/></a>
 </nav>
 

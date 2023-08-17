@@ -5,28 +5,23 @@ include '../includes/db.php';
 ?>
 <body>
 <?php include '../includes/navbar.php'; ?>
-    <div class="fmf"></br>
-    <form id="inputs" action="" method="POST">
-        <p class="reqs"><b>REQUEST A BOOK</b></p>
+<form id="req_f" action="" method="POST">
+        <fieldset>
+        <legend class="lsg">REQUEST A BOOK</legend></br>
+<div class="lg">
+    <input type="text" id="username" name="name" placeholder="Enter your username" required/>
 </br>
-    <input type="text" id="req_name" name="name" placeholder="Enter your username"  required/></br>
-    <input type="text" id="req_id" name="id" placeholder="Enter your STUDENT ID" required/></br>
-    <input type="email" id="req_email" name="email" placeholder="Enter your email" required/></br>
-    <input type="text" id="req_book" name="book" placeholder="Enter name of the book" required/></br>
+    <input type="text" id="book" name="book_name" placeholder="Enter name of the book" required/>
+</br>
+<div id="reqsub">
+<input id="req_btn" type="submit" value="REQUEST">
 </div>
-</br>
-    <input type="submit" id="req_submit" value="REQUEST">
     <?php
     if($_SERVER["REQUEST_METHOD"] == "POST") {
         $name =  $_REQUEST['name'];
-        $id = $_REQUEST['id'];
-        $email =  $_REQUEST['email'];
-        $book = $_REQUEST['book'];
-         
-        // Performing insert query execution
-        // here our table name is college
-        $sql = "INSERT INTO requests  VALUES ('$name',
-            '$id','$email','$book')";
+        $book = $_REQUEST['book_name'];
+
+        $sql = "INSERT INTO requests  VALUES ('$name','$book')";
          
         if(mysqli_query($con, $sql)){
             echo '<script>
@@ -46,6 +41,7 @@ include '../includes/db.php';
         }
     }
     ?>
+    </fieldset>
 </form>
 </body>
 </html>

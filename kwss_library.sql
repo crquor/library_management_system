@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 16, 2023 at 11:27 PM
+-- Generation Time: Aug 17, 2023 at 06:27 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -34,17 +34,17 @@ CREATE TABLE `books` (
   `Author` varchar(255) NOT NULL,
   `shelf` int(10) NOT NULL,
   `row_no` int(2) NOT NULL,
-  `column_no` int(2) NOT NULL,
-  `avail` varchar(30) NOT NULL
+  `column_no` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `books`
 --
 
-INSERT INTO `books` (`id`, `book_name`, `book_image`, `Author`, `shelf`, `row_no`, `column_no`, `avail`) VALUES
-(5506, 'The Power of Your Subconscious Mind', 'http://localhost/assets/images/books/tpoysm.jpg', 'DR Jospeph Murphy', 2, 1, 5, 'No'),
-(5507, 'To Kill A Mockingbird', 'http://localhost/assets/images/books/tkamb.webp', 'Harper Lee', 3, 2, 1, '');
+INSERT INTO `books` (`id`, `book_name`, `book_image`, `Author`, `shelf`, `row_no`, `column_no`) VALUES
+(5506, 'The Power of Your Subconscious Mind', 'http://localhost/assets/images/books/tpoysm.jpg', 'DR Jospeph Murphy', 2, 1, 5),
+(5509, 'Atomic Habits', 'https://www.biblionepal.com/cdn/shop/files/9781847941831.jpg?v=1685521594', 'James Clear', 5, 1, 2),
+(5510, 'The Power of Your Subconscious Mind', 'http://localhost/assets/images/books/tpoysm.jpg', 'DR Joseph Murphy', 2, 1, 3);
 
 -- --------------------------------------------------------
 
@@ -94,8 +94,6 @@ INSERT INTO `librarian` (`id`, `email`, `ausername`, `apass_code`) VALUES
 
 CREATE TABLE `requests` (
   `username` varchar(255) NOT NULL,
-  `stud_id` varchar(10) NOT NULL,
-  `email` varchar(210) NOT NULL,
   `book_name` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -103,9 +101,10 @@ CREATE TABLE `requests` (
 -- Dumping data for table `requests`
 --
 
-INSERT INTO `requests` (`username`, `stud_id`, `email`, `book_name`) VALUES
-('lorem ipsum', 'lorem#001', 'lorem@ipsum.com', 'atomic habits'),
-('crquor', 'crq', 'crq@cr.com', 'raa');
+INSERT INTO `requests` (`username`, `book_name`) VALUES
+('lorem ipsum', 'atomic habits'),
+('crquor', 'raa'),
+('aadipshres', 'talking to the moon');
 
 -- --------------------------------------------------------
 
@@ -127,7 +126,7 @@ CREATE TABLE `students` (
 
 INSERT INTO `students` (`id`, `student_photo`, `email`, `username`, `pass_code`) VALUES
 (3435, '', 'aadip@gmail.com', 'aadipshres', 'aadip123'),
-(124554, 'http://localhost/assets/images/students/crquor.webp', 'm@ghimiresijan.com.np', 'crquor', 'sijan');
+(1245, 'http://localhost/assets/images/students/crquor.webp', 'm@ghimiresijan.com.np', 'crquor', 'sijan');
 
 --
 -- Indexes for dumped tables
@@ -171,7 +170,7 @@ ALTER TABLE `students`
 -- AUTO_INCREMENT for table `books`
 --
 ALTER TABLE `books`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5508;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5511;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
