@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 17, 2023 at 06:27 AM
+-- Generation Time: Aug 18, 2023 at 07:06 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -44,7 +44,10 @@ CREATE TABLE `books` (
 INSERT INTO `books` (`id`, `book_name`, `book_image`, `Author`, `shelf`, `row_no`, `column_no`) VALUES
 (5506, 'The Power of Your Subconscious Mind', 'http://localhost/assets/images/books/tpoysm.jpg', 'DR Jospeph Murphy', 2, 1, 5),
 (5509, 'Atomic Habits', 'https://www.biblionepal.com/cdn/shop/files/9781847941831.jpg?v=1685521594', 'James Clear', 5, 1, 2),
-(5510, 'The Power of Your Subconscious Mind', 'http://localhost/assets/images/books/tpoysm.jpg', 'DR Joseph Murphy', 2, 1, 3);
+(5511, 'Adventures of Tom Sawyer', 'https://mpd-biblio-covers.imgix.net/9781429959278.jpg?w=300', 'Mark Twain', 1, 3, 3),
+(5512, 'Ben Hur', 'https://images.penguinrandomhouse.com/cover/9780451532091', 'Lewis Wallace', 2, 4, 5),
+(5513, 'Time Machine', 'https://m.media-amazon.com/images/I/81HifkpAdNL._AC_UF1000,1000_QL80_.jpg', 'H.G. Wells', 3, 1, 2),
+(5514, 'To Kill a mockingbird', 'http://localhost/assets/images/books/tkamb.webp', 'Harper Lee', 4, 3, 1);
 
 -- --------------------------------------------------------
 
@@ -64,7 +67,8 @@ CREATE TABLE `books_issued` (
 --
 
 INSERT INTO `books_issued` (`username`, `book_name`, `issued_date`, `return_date`) VALUES
-('crquor', 'To Kill a mockingbird', '2023-08-08', '2023-08-31');
+('crquor', 'To Kill a mockingbird', '2023-08-08', '2023-08-31'),
+('crquor', 'Atomic Habits', '2023-08-29', '2023-08-31');
 
 -- --------------------------------------------------------
 
@@ -113,7 +117,7 @@ INSERT INTO `requests` (`username`, `book_name`) VALUES
 --
 
 CREATE TABLE `students` (
-  `id` int(11) NOT NULL,
+  `id` int(4) NOT NULL,
   `student_photo` varchar(210) NOT NULL,
   `email` varchar(210) NOT NULL,
   `username` varchar(10) NOT NULL,
@@ -125,8 +129,8 @@ CREATE TABLE `students` (
 --
 
 INSERT INTO `students` (`id`, `student_photo`, `email`, `username`, `pass_code`) VALUES
-(3435, '', 'aadip@gmail.com', 'aadipshres', 'aadip123'),
-(1245, 'http://localhost/assets/images/students/crquor.webp', 'm@ghimiresijan.com.np', 'crquor', 'sijan');
+(1234, 'https://avatars.githubusercontent.com/u/89701791?v=4', 'm@ghimiresijan.com.np', 'crquor', 'sijan'),
+(5678, 'https://pereaclinic.com/wp-content/uploads/2019/12/270x270-male-avatar.png', 'lorem@ipsumc.om', 'lorem', 'lorem');
 
 --
 -- Indexes for dumped tables
@@ -160,7 +164,7 @@ ALTER TABLE `requests`
 -- Indexes for table `students`
 --
 ALTER TABLE `students`
-  ADD PRIMARY KEY (`username`);
+  ADD PRIMARY KEY (`username`,`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -170,7 +174,7 @@ ALTER TABLE `students`
 -- AUTO_INCREMENT for table `books`
 --
 ALTER TABLE `books`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5511;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5515;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -13,10 +13,10 @@ include $_SERVER['DOCUMENT_ROOT']."/includes/db.php";
       <a class="button">ACTIONS</a>
     </summary>
     <ul>
+    <li><a href="./issue_a_book">Issue a book</a></li>
       <li><a href="./add_a_book">Add a new book</a></li>
       <li><a href="./remove_a_book">Remove a book</a></li>
-      <li><a href="./manage_users">Manage students</a></li>
-
+      <li><a href="./manage_students">Manage students</a></li>
   </ul>
 </details>
      

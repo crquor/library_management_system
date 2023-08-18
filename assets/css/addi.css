@@ -15,6 +15,7 @@ a.button {
   letter-spacing: 2px;
   float: right;
   text-transform: uppercase;
+  cursor: pointer;
   }
 
 .dropdown {
@@ -107,5 +108,10 @@ a.button {
       right: 0;
       left: 0;
       bottom: 0;
+  }
+  .date_selector label{
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 170px;
   }
   
