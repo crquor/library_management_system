@@ -22,7 +22,7 @@ For now, only manual installation is supported which can be done by following wa
     
  2. Extract it and move it to htdocs folder ( for xampp users) and www folder (for WAMPP users)
 
- 3. Make sure that your web server(Apache or nginx) and MySQL                      server is running
+ 3. Make sure that your web server(Apache or nginx) and MySQL                      servers are running
 
  4. Create a MYSQL database 
 
@@ -37,6 +37,6 @@ For now, only manual installation is supported which can be done by following wa
     **Finally, Go to http://localhost or 127.0.0.1**
 
 ### NOTE: 
-The project is in the initial stage and no any security mechanisms has been implemented so it's **not** recommended to host this project.
+The project is in the initial stage. So, it's **not** recommended to host this project.
 
 
